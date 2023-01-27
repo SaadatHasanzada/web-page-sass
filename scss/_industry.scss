@@ -1,0 +1,59 @@
+.industry{
+  @include width();
+  text-align: center;
+  padding: 5rem 0;
+  .heading{
+    width: 80%;
+    margin: 0 auto 5rem auto;
+    @include lg() {
+      width:50%;
+    }
+    p,h2{
+      margin-bottom: 1rem;
+    }
+  }
+}
+.cards{
+  @include flex($direction:column);
+  gap: 2rem;
+  @include lg(){
+    @include flex(space-between,row);
+    margin-top: 4rem;
+  }
+}
+.card img{
+  width: 60px;
+  height: 60px;
+}
+.card{
+  border-radius: 11px;
+  background-color:$card-color;
+  
+  @include lg(){
+    width: 30%;
+  }
+}
+.card-header{
+
+ border-top-left-radius: 11px;
+ border-top-right-radius: 11px;
+  padding: 1.5rem 1.3rem;
+  height: 30%;
+  @include flex($justify:center);
+  gap: 10px;
+}
+.card-body{
+  @include flex(center,column);
+  align-items:flex-start;
+border:1px solid $card-color;
+border-radius:11px;
+background-color:$white;
+  text-align: left;
+  padding: 1.5rem;
+  height: 70%;
+  line-height: 1.8rem;
+  @include lg(){
+    padding: 2rem 3rem;
+
+  }
+}

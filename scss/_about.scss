@@ -1,0 +1,50 @@
+.about{
+  position: relative;
+
+  .about-img{
+background: linear-gradient(180deg, rgba(0, 0, 0, 0) 14.58%, rgba(56, 56, 56, 0.84) 100%),url(/assets/images/background_section.jpg);
+@include background();
+width: 75%;
+height: 25rem;
+position: absolute;
+top: 35%; 
+left: 14%;
+@include flex(center,row);
+
+@include lg(){
+  // top: 35vh;
+  left: 20%;
+  width: 60%;
+}
+
+  }
+ 
+}
+.bg-one{
+  width: 100%;
+  padding-top: 4rem;
+ padding-bottom: 20rem;
+  background-color:$background-color-about;
+  p{
+    margin-top: 1rem;
+  }
+  .bg-one__heading{
+    @include width(60%);
+    text-align: center;
+
+    @include lg(){
+      width: 40%;
+    }
+  }
+  @include lg(){
+    padding-bottom: 16rem;
+  }
+}
+.bg-two{
+  height: 40%;
+  width: 100%;
+  background-color:$primary-color;
+  @include lg(){
+   height: 50%;
+  }
+}

@@ -1,0 +1,35 @@
+@mixin flex($justify:null,$direction:null){
+display: flex;
+align-items:center;
+justify-content: $justify;
+flex-direction: $direction;
+}
+
+@mixin fonts($size:null,$weight:null,$color:null){
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin lg(){
+  @media screen and (min-width:$large){
+    @content
+  }
+};
+
+@mixin background(){
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin width($width:75%){
+margin: 0 auto;
+width: $width;
+}
+
+@mixin hover($font){
+  color:$secondary-color;
+      font-size: $font;
+      cursor: pointer;
+}

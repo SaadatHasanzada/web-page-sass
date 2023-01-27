@@ -1,0 +1,58 @@
+.clients{
+  background-color:$background-color-about;
+  padding: 3rem 0;
+  @include lg(){
+    padding: 4rem 0;
+  }
+}
+
+.clients-heading{
+  width: 60%;
+  text-align: center;
+  margin: 0 auto 3rem auto;
+  h2{
+    margin-bottom: 1rem;
+  }
+  @include lg(){
+    width: 40%;
+  }
+}
+
+.clients-cards{
+
+@include width();
+  .icons,.client-card__paragraph{
+    margin-bottom: 1rem;
+  }
+
+  @include lg(){
+    @include flex($justify:space-between);
+    
+  }
+}
+.card-profile{
+ @include flex;
+ gap: .5rem;
+ p:first-child{
+  @include fonts($color:$secondary-color,$weight:$medium);
+  margin-bottom: .2rem;
+ }
+ p:last-child{
+  @include fonts($color:$primary-color,$weight:$medium);
+
+ }
+}
+.client-card{
+  border: 1px solid #DEDEDE;
+border-radius: 5px;
+  background-color:$white;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  &:last-child{
+    margin-bottom:0;
+  }
+  @include lg(){
+    margin-bottom: 0;
+    width: 30%;
+  }
+}

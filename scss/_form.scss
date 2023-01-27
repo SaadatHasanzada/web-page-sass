@@ -1,0 +1,66 @@
+.form{
+  background: url(/assets/images/Background_footer.png);
+ @include background();
+  width: 100%;
+  padding: 5rem 0;
+
+}
+.form-body{
+  width: 70%;
+  .form-body__heading{
+ 
+margin-bottom: 2rem;
+  }
+
+}
+input,select,textarea{
+width: 100%;
+margin-bottom: .8rem;
+height: 3rem;
+padding: 0 .6rem ;
+@include fonts($text-size,$medium,$text-color);
+border: 1px solid #BDBDBD;
+background-color:#F9F9F9;
+border-radius: 5px;
+}
+textarea{
+  height: 10rem;
+  padding: 1.1rem 1.2rem;
+  margin-bottom: 2rem;
+}
+.form-btn{
+background-color:$secondary-color;
+color: $white;
+border-radius: 5px;
+padding: 1rem 0;
+width: 100%;
+display: inline-block;
+text-align: center;
+}
+
+@media screen and (min-width:350px){
+ .form-body{
+  margin: 0 auto;
+ } 
+  }
+@include lg(){
+  .form-input,.form-select{
+    
+      @include flex($justify:space-between);
+      
+    }
+  
+input,select{
+
+    width: 48%;
+  
+}
+.form-btn{
+  padding: 1rem 0;
+  width:13rem;
+}
+.form-body{
+  width: 75%;
+padding-right: 30%;
+}
+}

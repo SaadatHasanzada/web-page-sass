@@ -1,0 +1,56 @@
+.team{
+  padding: 3rem 0;
+  @include lg(){
+    padding: 4rem 0;
+  }
+}
+.team-heading{
+  width: 60%;
+  text-align: center;
+  margin: 0 auto 3rem auto;
+  h2{
+    margin-bottom: 1rem;
+  }
+  @media screen and(min-width:800px){
+    width: 40%;
+  }
+}
+.team-cards{
+@include flex($direction:column);
+@include width();
+gap: 2rem;
+
+  
+  img{
+    max-width: 100%;
+  }
+  @include lg(){
+    @include flex(space-between,row);
+    
+  }
+}
+
+.team-card{
+  border: 1px solid #EEEEEE;
+  .team-card__body{
+    padding: 2rem 1rem;
+    text-align: center;
+    p:first-child{
+      @include fonts($color:$primary-color,$weight:$semi-bold);
+      margin-bottom: .5rem;
+     }
+    .second_par{
+      @include fonts($weight:$medium);
+    margin-bottom: .5rem;
+     }
+     .icons{
+     @include flex($justify:center);
+      gap: .7rem;
+     }
+  }
+
+  @include lg(){
+   
+    width: 30%;
+  }
+}

@@ -1,0 +1,51 @@
+@import 'variables';
+@import 'reset';
+@import 'menu';
+@import 'utilits';
+@import 'home';
+@import 'industry';
+@import 'about.scss';
+@import 'clients';
+@import 'team';
+@import 'form';
+@import 'consulting';
+@import 'footer';
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+h1{
+  @include fonts($subheading-size, $bold,$primary-color);
+}
+h2{
+  @include fonts($subheading-size, $semi-bold,$primary-color);
+}
+h3{
+  @include fonts($subtext-size, $semi-bold,$primary-color);
+}
+h4{
+  @include fonts(16px, $semi-bold,$primary-color);
+}
+
+p{
+  @include fonts($text-size, $regular,$text-color);
+}
+
+.card-body p{
+  @include fonts($size:$text-size,$weight: $medium);
+}
+
+.card-body a{
+  @include fonts($text-size,$medium,$secondary-color);
+}
+
+header{
+  width: 100%;
+position:fixed;
+  z-index: 5;
+  background-color:$background-color;
+
+  @media screen  and(min-width:800px){
+    background-color:transparent;
+  }
+}
+
